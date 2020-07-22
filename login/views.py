@@ -62,3 +62,4 @@ def logout(request):
     auth.logout(request)
     return redirect('blog')
 # Create your views here.
+#..
