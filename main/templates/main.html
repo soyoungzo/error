@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+<!----base에 상속시키기 시작------>
+
+{% block contents %}
+
+<h1>Main Page</h1>
+<p>{{txt}}</p>
+    <a href="{% url 'other' %}">go other page</a>
+    <br><br>
+
+    {% for blog in blog.all%}
+    <p>{{blog.title}}</p>
+    <p>{{blog.date}}</p>
+    <p>{{blog.summary}}<a href="{% url 'detail' blog.id%}">...더보기</a></p>
+    {% endfor %}
+
+
+
+{% endblock %}
+<!----block 끝내기------->
+
